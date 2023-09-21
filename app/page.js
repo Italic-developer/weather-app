@@ -58,14 +58,7 @@ const page =  () => {
         <input id='location' className='outline-none w-1/2 md:auto p-2 rounded-lg bg-slate-300' onChange={handleInputChange} value={inputValue} />
       </div> 
       <div className='glassbg flex flex-col items-center h-auto p-2 relative mb-auto md:left-48 lg:left-96 md:w-1/2 mt-4 flex justify-center '>
-       <h1 className='block my-6 font-semibold text-justify'>Current status : <span className='font-bold text-5xl block'>
-  {data && data.days && data.days.length > 0 ? data.days[0].description : "N/A"}
-</span> </h1>
-
-        <img className='w-1/2' src={icon}  />
-      </div>
-    
-
+    </div>
     </div>
   )
 }
