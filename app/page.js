@@ -21,11 +21,12 @@ const page = () => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
+       
         return response.json();
       })
       .then((jsonData) => {
         setData(jsonData);
-
+         console.log(jsonData)
         const currentIcon = jsonData?.currentConditions?.icon;
         if (['cloudy-clear', 'cloudy', 'partly-cloudy-day', 'partly-cloudy-night', 'mostly-cloudy'].includes(currentIcon)) {
           setIcon('/cloudy.svg');
